@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="root" value="${pageContext.request.contextPath }/"/>
+<style>
+	.tmtxt{
+		font-size: 8px;
+		
+	}
+	.topbar{
+		
+	}
+
+</style>
+<div class="topbar">
+<label class="tmtxt"><a href="${root }login">로그인</a></label>
+<label class="tmtxt"><a href="${root }membership">회원가입</a></label>
+<label class="tmtxt"><a href="${root }recommend">추천편의점지도</a></label>
+<label class="tmtxt"><a href="${root }creatQR">고객센터</a></label>
+</div>
