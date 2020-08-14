@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:url var="home" value="/" />
-<!--  -->
+<!--ㅎㅇㅎㅇ  -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/Membership/css/style.css">
 
