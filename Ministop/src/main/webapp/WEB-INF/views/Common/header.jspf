@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
-<c:url var="home" value="/"/>
 <style>
 	.header{
 			border-bottom: 1px solid black;
@@ -40,8 +39,7 @@
 	
 </span>
 
-<label onclick="setMyStore('${home}store/setmystore');">지점선택</label>
-<a href="${root }setmystore">지점선택</a>
+<label onclick="setMyStore('${root}store/setmystore');">지점선택</label>
 
 <a href="${root }mainpage"><img id="headLogo" src="${root }images/mslogo.png"/></a>
 
