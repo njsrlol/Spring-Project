@@ -41,8 +41,6 @@
 	<context:component-scan base-package="com.ministop.products" />
 	<context:component-scan base-package="com.ministop.store" />
 	<context:component-scan base-package="com.ministop.recommend" />
-						
-	       
 	
 	
 </beans:beans>

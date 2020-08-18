@@ -27,13 +27,19 @@
 	}
 	
 </style>
+<script>
+	function setMyStore(url){
+		window.name = "지점선택";
+		window.open(url, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+	}
+</script>
 <div class="header">
 
 <span class="topNav">
 	
 </span>
 
-<a href="${root }setmystore">지점선택</a>
+<label onclick="setMyStore('${root}store/setmystore');">지점선택</label>
 
 <a href="${root }mainpage"><img id="headLogo" src="${root }images/mslogo.png"/></a>
 
