@@ -48,7 +48,7 @@ border-top: 1px solid black;
 
 }
 </style>
-</head>
+</head>	
 <body>
 	<div class="topbar">
 		<%@ include file="Common/topbar.jspf" %>
@@ -58,7 +58,7 @@ border-top: 1px solid black;
 	</header>
 	<main>
 		<c:import url="${home }${formPath }"></c:import>
-	</main>
+	</main>	
 	<footer>
 		<%@ include file="Common/footer.jspf"%>
 	</footer>

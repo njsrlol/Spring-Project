@@ -18,7 +18,6 @@
 	p:dataSource-ref="dataSource"
 	p:mapperLocations="/WEB-INF/spring/mapper/*.xml"/>
 
-	
 	<bean id="mainFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	p:mapperInterface="com.ministop.main.DAO"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
@@ -28,7 +27,11 @@
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 	
 	<bean id="mypageFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
-	p:mapperInterface="com.ministop.mypage.MypageDAO"
+	p:mapperInterface="com.ministop.mypage.IMypageDAO"
+	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+	
+	<bean id="storeFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	p:mapperInterface="com.ministop.store.IStoreDAO"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 	
 	
