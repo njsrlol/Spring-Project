@@ -28,6 +28,8 @@ public class HomeController {
 	public HomeController() {
 		pageMap = new HashMap<String, String>();
 		
+		pageMap.put("customerCenter", "Common/CustomerService");
+		
 		//jeongsoo
 		pageMap.put("membership", "Membership/memberForm");
 		pageMap.put("login", "Membership/loginForm");
