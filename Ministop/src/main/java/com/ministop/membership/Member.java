@@ -2,7 +2,7 @@ package com.ministop.membership;
 
 //회원 
 public class Member extends Login{
-
+	
 	// 이메일
 	private String email;
 

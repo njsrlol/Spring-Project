@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ministop.recommend.RIDao">
+
+	<select id="radiusSearch" parameterType="Map" resultType="com.ministop.recommend.Store">
+		SELECT STORENUM, BRANCHNAME, SIDONAME, SIGUNGUNAME, PUBLICDONG, NEWADDRESS, LONGITUDE, LATITUDE
+		FROM STORE
+		WHERE LONGITUDE <![CDATA[ >= ]]> #{longitude}-0.05 AND LONGITUDE <![CDATA[ <= ]]> #{longitude}+0.05
+		AND LATITUDE <![CDATA[ >= ]]> #{latitude}-0.05 AND LATITUDE <![CDATA[ <= ]]> #{latitude}+0.05
+	</select>
+
+</mapper>

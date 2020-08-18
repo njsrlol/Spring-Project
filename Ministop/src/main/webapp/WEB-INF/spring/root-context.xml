@@ -27,5 +27,9 @@
 	<bean id="memberFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	p:mapperInterface="com.ministop.membership.MemberIDao"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+	
+		<bean id="recommendFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	p:mapperInterface="com.ministop.recommend.RIDao"
+	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 					
 </beans>
