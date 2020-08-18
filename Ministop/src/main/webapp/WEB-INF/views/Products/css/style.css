@@ -5,7 +5,6 @@
 }
 
 body {
-  background: #F9F8FD;
 }
 
 nav {
@@ -73,15 +72,12 @@ ul li:hover {
   border-bottom: 1px solid #2375D8;
 }
 ul li:hover a {
-  color: #F9F8FD;
 }
 ul li:hover ul {
   visibility: visible;
   opacity: 1;
-  box-shadow: 0px 3px 5px 2px #EBECF1;
 }
 ul li:hover ul li a {
-  color: #F9F8FD;
 }
 
 /* 

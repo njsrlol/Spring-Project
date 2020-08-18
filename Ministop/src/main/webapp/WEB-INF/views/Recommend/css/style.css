@@ -1,6 +1,4 @@
 body {
-  background: #F9F8FD;
-  font-family: 'Lexend Exa', sans-serif;
 }
 
 nav {
@@ -11,7 +9,6 @@ nav {
   display: inline-block;
   border: 2px solid #EBECF1;
   border-radius: 30px;
-  animation: slide-in 1s ease-out;
 }
 
 ul {
@@ -60,13 +57,11 @@ ul li ul li a {
   color: #2375D8;
 }
 ul li:hover {
-  background: #EC4138;
   border: 2px solid #F05749;
   border-right: 2px solid #E02A21;
   border-bottom: 2px solid #E02A21;
 }
 ul li:hover a {
-  color: #F9F8FD;
 }
 ul li:hover ul {
   visibility: visible;
@@ -74,22 +69,7 @@ ul li:hover ul {
   box-shadow: 0px 3px 5px 2px #EBECF1;
 }
 ul li:hover ul li a {
-  color: #F9F8FD;
 }
 
-@keyframes slide-in {
-  0% {
-    top: -50px;
-  }
-  40% {
-    top: 20px;
-  }
-  70% {
-    top: 10px;
-  }
-  100% {
-    top: 15px;
-  }
-}
 
 
