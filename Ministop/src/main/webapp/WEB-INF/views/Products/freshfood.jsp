@@ -6,7 +6,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - CodePen Challenge: Navigation with Sub-Navigation</title>
+  <title>FreshFood</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Products/css/mainstyle.css">
   <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Products/css/style.css">
@@ -61,7 +61,6 @@ button {
 </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <div class="wrapper">
 <nav>
   <ul>

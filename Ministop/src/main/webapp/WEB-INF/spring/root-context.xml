@@ -18,18 +18,29 @@
 	p:dataSource-ref="dataSource"
 	p:mapperLocations="/WEB-INF/spring/mapper/*.xml"/>
 
-	
 	<bean id="mainFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	p:mapperInterface="com.ministop.main.DAO"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
-
 	
 	<bean id="memberFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	p:mapperInterface="com.ministop.membership.MemberIDao"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 	
-		<bean id="recommendFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	<bean id="mypageFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	p:mapperInterface="com.ministop.mypage.IMypageDAO"
+	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+	
+	<bean id="storeFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	p:mapperInterface="com.ministop.store.IStoreDAO"
+	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+	
+	<bean id="orderFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	p:mapperInterface="com.ministop.order.IOrderDAO"
+	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+	
+	<bean id="recommendFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	p:mapperInterface="com.ministop.recommend.RIDao"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
-					
 </beans>
+
+

@@ -14,7 +14,7 @@
 </style>
 <script>
 	function goOrder(){
-		
+		document.location.href="order"
 	}
 </script>
 </head>

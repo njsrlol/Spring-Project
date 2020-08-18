@@ -25,7 +25,7 @@
 <div class="mypage memberInfo">
 <div>OOO님 안녕하세요<br/>나의 매장 OO점</div>
 
-<a href="minirefri">미니냉장고 git test</a>
+<a href="minirefri">미니냉장고</a>
 
 <div>
 포인트 : <input type="text" readonly="readonly"/><br/>
@@ -45,7 +45,7 @@
 	</tr>
 	<tr>
 		<td>123</td>
-		<td>345</td>
+		<td><a href="creatQR">345</a></td>
 	</tr>
 </table>
 </div>

@@ -3,28 +3,28 @@
 <mapper namespace="com.ministop.membership.MemberIDao">
 	<select id="isExistID" parameterType="String"
 		resultType="Integer">
-		SELECT count(*) FROM MEMBER
+		SELECT count(*) FROM MINIMEMBER
 		WHERE id=#{id}
 	</select>
 
 
 	<insert id="insertMember"
 		parameterType="com.ministop.membership.Member">
-		INSERT INTO MEMBER(ID,PW,EMAIL,NAME)
+		INSERT INTO MINIMEMBER(ID,PW,EMAIL,NAME)
 		VALUES (#{id}, #{pw}, #{email}, #{NAME})
 	</insert>
 
 
 	<select id="findInfoProc" parameterType="Map" resultType="String">
 		SELECT id
-		FROM MEMBER
+		FROM MINIMEMBER
 		WHERE email=#{email}
 		<if test="id !=null">AND id=#{id}</if>
 	</select>
 	
 	
 	<select id="loginProc" parameterType="String" resultType="Integer">
-		SELECT count(*) FROM MEMBER
+		SELECT count(*) FROM MINIMEMBER
 		WHERE id=#{id} AND pw=#{pw}
 	</select>
 </mapper>
