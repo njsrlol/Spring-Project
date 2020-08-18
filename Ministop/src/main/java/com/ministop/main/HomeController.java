@@ -42,6 +42,10 @@ public class HomeController {
 		pageMap.put("mainpage", "Products/mainpage");
 		pageMap.put("freshfood", "Products/freshfood");
 		pageMap.put("miniPro", "Products/miniPro");
+		pageMap.put("productdetail", "Products/productdetail");
+		pageMap.put("script", "Products/css/script");
+		
+		
 		
 		pageMap.put("setmystore", "Store/searchStoreForm");
 		pageMap.put("mypage", "MyPage/mypage");

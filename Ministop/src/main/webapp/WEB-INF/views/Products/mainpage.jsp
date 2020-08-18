@@ -8,8 +8,6 @@
 <head>
   <meta charset="UTF-8">
   <title>mainPage</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/Products/css/mainstyle.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/Products/css/style.css">
 
@@ -109,16 +107,15 @@ $(document).ready(function () {
   </ul>
 </nav>
 </div>
-<!-- partial -->
-<!-- partial:index.partial.html -->
-<div id="body1">
 
     <div class="page-right-content">
       <div class="content-line content-line-hero">
-        <div class="line-header">
+      <div class="line-header">
           <span class="header-text">신상품</span>
         </div>
+     <div id="owl-slider-1" class="slider-wrapper owl-carousel">
         <div class="slider-wrapper owl-carousel owl-theme owl-loaded owl-drag" id="owl-slider-1">
+         
           <div class="item hero-img-wrapper img-1">
             <div class="upload-text-wrapper">
               <p class="upload-text-header">The </p>
@@ -126,6 +123,7 @@ $(document).ready(function () {
             </div>
             <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2240&q=80" alt="SlideShow">
           </div>
+          
           <div class="item hero-img-wrapper img-2">
             <div class="upload-text-wrapper">
               <p class="upload-text-header">History of Art</p>
@@ -133,6 +131,7 @@ $(document).ready(function () {
             </div>
             <img src="https://images.unsplash.com/photo-1485518994577-6cd6324ade8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2144&q=80" alt="SlideShow">
           </div>
+          
           <div class="item hero-img-wrapper img-3">
             <div class="upload-text-wrapper">
               <p class="upload-text-header">Van Life</p>
@@ -140,7 +139,9 @@ $(document).ready(function () {
             </div>
             <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2208&q=80" alt="SlideShow">
           </div>
+          
         </div>
+      </div>
       </div>
       
       
@@ -286,9 +287,8 @@ $(document).ready(function () {
         
         
       </div>
-    </div>
+
   <script src='${pageContext.request.contextPath}/Products/css/owl.carousel.min.js'></script>
-<script src='${pageContext.request.contextPath}/Products/css/scarousel.min2.js'></script><script  src="./script.js"></script>
-<script href="${pageContext.request.contextPath}/Products/css/mainscript.css"></script>
+<script src='${pageContext.request.contextPath}/Products/css/owl.carousel.min2.js'></script>
 </body>
 </html>
