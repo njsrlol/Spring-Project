@@ -13,5 +13,10 @@ public class MyPageController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MyPageController.class);
 
+	@RequestMapping("creatQR")
+	public String creatQR() {
+		
+		return "MyPage/ministopQRForm";
+	}
 
 }
