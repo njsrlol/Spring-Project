@@ -8,7 +8,7 @@
 <head>
 <!-- ㅎㅇ -->
   <meta charset="UTF-8">
-  <title>CodePen - CodePen Challenge: Navigation with Sub-Navigation</title>
+  <title>miniPro</title>
   <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="${pageContext.request.contextPath}/Products/css/style.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Products/css/mainstyle.css">
@@ -65,7 +65,6 @@ button {
 </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <div class="wrapper">
 <nav>
   <ul>
@@ -89,10 +88,10 @@ button {
 	<button type="submit" id="menu_btn2" >검색</button>
 	</div>
 		<div class="content-line content-line-list">
-        <div id="owl-slider-2" class="slider-wrapper owl-carousel">
+		<div id="owl-slider-2" class="slider-wrapper owl-carousel">
           <div class="item video-box-wrapper">
             <div class="img-preview">
-              <img src="" >
+              <a href="${root }productdetail"><img src="" ></a>
             </div>
             <div class="video-description-wrapper">
               <p class="video-description-header">상품명</p>
@@ -152,7 +151,7 @@ button {
           </div>
          
         </div>
-      </div>
+     
       
           
           

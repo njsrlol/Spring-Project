@@ -13,7 +13,8 @@
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
-	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<!-- Handles HTTP GET requests for /resour
+	ces/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping ="/Products/css/**" location="/WEB-INF/views/Products/css/" />
 	<resources mapping ="/Owner/css/**" location="/WEB-INF/views/Owner/css/" />
