@@ -34,5 +34,7 @@
 	p:mapperInterface="com.ministop.store.IStoreDAO"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 	
-	
+	<bean id="orderFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	p:mapperInterface="com.ministop.order.IOrderDAO"
+	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
 </beans>
