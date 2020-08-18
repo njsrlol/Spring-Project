@@ -15,6 +15,12 @@
 	grid-template-columns : 1fr;	
 }
 </style>
+<script>
+	function makeQR(url){
+		window.name = "QRCODE";
+		window.open(url, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+	}
+</script>
 </head>
 <body>
 
@@ -45,7 +51,7 @@
 	</tr>
 	<tr>
 		<td>123</td>
-		<td><a href="creatQR">345</a></td>
+		<td><input type="button" value="QR" onclick="makeQR('${root}mypage/creatQR');"/></td>
 	</tr>
 </table>
 </div>
