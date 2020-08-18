@@ -22,10 +22,14 @@
 	<bean id="mainFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	p:mapperInterface="com.ministop.main.DAO"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
-
 	
 	<bean id="memberFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	p:mapperInterface="com.ministop.membership.MemberIDao"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
-					
+	
+	<bean id="mypageFactoryBean" class="org.mybatis.spring.mapper.MapperFactoryBean"
+	p:mapperInterface="com.ministop.mypage.MypageDAO"
+	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+	
+	
 </beans>
