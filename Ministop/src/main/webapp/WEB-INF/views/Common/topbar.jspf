@@ -1,20 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%
+	String loginId = (String)session.getAttribute("loginId");
+	if(loginId==null) loginId="";
+%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="root" value="${pageContext.request.contextPath }/"/>
+<c:set var="root" value="${pageContext.request.contextPath }/" />
 <style>
-	.tmtxt{
-		font-size: 8px;
-		
-	}
-	.topbar{
-		
-	}
+.tmtxt {
+	font-size: 8px;
+}
 
+.topbar {
+	
+}
 </style>
 <div class="topbar">
-<label class="tmtxt"><a href="${root }login">로그인</a></label>
-<label class="tmtxt"><a href="${root }membership">회원가입</a></label>
-<label class="tmtxt"><a href="${root }recommend">추천편의점지도</a></label>
-<label class="tmtxt"><a href="${root }creatQR">고객센터</a></label>
+	<%if("".contentEquals(loginId)){ %>
+	<label class="tmtxt"><a href="${root }login">로그인</a></label>
+	<%}else{ %>
+	<label class="tmtxt"><a href="${root }logout">로그아웃</a></label>
+	<%} %>
+	<label
+		class="tmtxt"><a href="${root }membership">회원가입</a></label> <label
+		class="tmtxt"><a href="${root }recommend">추천편의점지도</a></label> <label
+		class="tmtxt"><a href="${root }creatQR">고객센터</a></label>
 </div>
