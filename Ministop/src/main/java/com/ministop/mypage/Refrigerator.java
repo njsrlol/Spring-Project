@@ -1,12 +1,11 @@
 package com.ministop.mypage;
 
-public class Refrigerator {
+import com.ministop.products.Products;
+
+public class Refrigerator extends Products {
 
     // 아이디 
     private String id;
-
-    // 상품번호 
-    private String productnum;
 
     // 냉장고등록일 
     private String refridate;
@@ -17,14 +16,6 @@ public class Refrigerator {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getProductnum() {
-        return productnum;
-    }
-
-    public void setProductnum(String productnum) {
-        this.productnum = productnum;
     }
 
     public String getRefridate() {
@@ -39,7 +30,6 @@ public class Refrigerator {
     public void CopyData(Refrigerator param)
     {
         this.id = param.getId();
-        this.productnum = param.getProductnum();
         this.refridate = param.getRefridate();
     }
 }

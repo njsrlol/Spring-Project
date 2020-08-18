@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="home" value="/" />
+<c:set var="root" value="${pageContext.request.contextPath }/"/>
 <head>
 <style type="text/css">
 .mpWrapper{
@@ -20,6 +21,7 @@
 		window.name = "QRCODE";
 		window.open(url, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
 	}
+	
 </script>
 </head>
 <body>
@@ -31,7 +33,7 @@
 <div class="mypage memberInfo">
 <div>OOO님 안녕하세요<br/>나의 매장 OO점</div>
 
-<a href="minirefri">미니냉장고</a>
+<a href="${root }mypage/getminiRefri">미니냉장고</a>
 
 <div>
 포인트 : <input type="text" readonly="readonly"/><br/>

@@ -1,5 +1,9 @@
 package com.ministop.mypage;
 
-public interface IMyPageService {
+import java.util.List;
 
+import com.ministop.products.Products;
+
+public interface IMyPageService {
+	public List<Products> getRefri(String id);
 }
