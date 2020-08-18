@@ -110,7 +110,7 @@
 		
 		
 		
-		
+/*		
 	
 		// 주소를 좌표로 바꾸기 위한 geocoder 생성
 		var geocoder = new kakao.maps.services.Geocoder();
@@ -215,7 +215,7 @@ var overlay = new kakao.maps.CustomOverlay({
 			setMarkers(null);
 			markers = [];
 		}
-	
+	*/
 	</script>
 </body>
 </html>

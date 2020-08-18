@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -91,8 +92,10 @@ public class MemberController {
 	}
 
 	@RequestMapping("loginProc")
-	public String loginProc(Login login, Model model) {
+	public String loginProc(Login login, Model model, HttpServletRequest request) {
 		if (iServ.loginProc(login)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("loginId", login.getId());
 			return "redirect:/mainpage";
 		}
 		model.addAttribute("msg", "로그인에 실패하였습니다.");

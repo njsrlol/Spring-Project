@@ -5,6 +5,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,4 +87,11 @@ public class HomeController {
          
            return mv;
     }
+    
+	@RequestMapping("/logout")
+	public String logout(HttpServletRequest request) {
+			HttpSession session = request.getSession();
+			session.removeAttribute("loginId");
+		return "redirect:/mainpage";
+	}
 }

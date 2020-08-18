@@ -11,7 +11,7 @@
 	<insert id="insertMember"
 		parameterType="com.ministop.membership.Member">
 		INSERT INTO MINIMEMBER(ID,PW,EMAIL,NAME)
-		VALUES (#{id}, #{pw}, #{email}, #{NAME})
+		VALUES (#{id}, #{pw}, #{email}, #{name})
 	</insert>
 
 

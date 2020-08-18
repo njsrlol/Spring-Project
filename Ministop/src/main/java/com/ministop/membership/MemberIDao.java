@@ -1,6 +1,5 @@
 package com.ministop.membership;
 
-import java.util.List;
 import java.util.Map;
 
 public interface MemberIDao {
