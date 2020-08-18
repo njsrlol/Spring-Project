@@ -27,7 +27,11 @@
 </head>
 <body>
 	<form action="${home }recommend/radiusSearch">
-
+	<c:forEach var="store" items="${storeLst }">
+	${store.newaddress }
+	${store.longitude }
+	${store.latitude }<br/>
+	</c:forEach>
 		<nav>
 			<ul>
 				<li><a href="${root }recommend">인근지역 플러스상품 추천</a></li>
