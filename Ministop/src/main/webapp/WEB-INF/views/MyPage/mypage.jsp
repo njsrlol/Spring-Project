@@ -30,7 +30,7 @@
 <div class="mypage mpWrapper">
 
 <div class="mypage memberInfo">
-<div>OOO님 안녕하세요<br/>나의 매장 OO점</div>
+<div>${loginId}님 안녕하세요<br/>나의 매장 OO점</div>
 
 <a href="${root }mypage/getminiRefri">미니냉장고</a>
 
