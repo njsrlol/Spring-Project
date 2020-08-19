@@ -4,7 +4,7 @@
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <c:set var="loginId" value="${loginId }"/>
 <c:set var="mypageURL" value="${root }mypage"/>
-<c:set var="cartURL" value="${root }cart"/>
+<c:set var="cartURL" value="${root }mypage/tocart"/>
 <c:set var="storeURL" value="${root }store/setmystore"/>
 <c:if test="${loginId == null }">
 <c:set var="mypageURL" value="${root }login"/>

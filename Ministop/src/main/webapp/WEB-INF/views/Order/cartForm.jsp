@@ -16,10 +16,17 @@
 	function goOrder(){
 		document.location.href="order"
 	}
+	
+	function removeCart(){
+		document.location.href="removecart";
+	}
 </script>
 </head>
 <body>
-
+${emptyInfo }
+<c:forEach var="cartLst" items="${cartLst }" varStatus="loop">
+${cartLst }
+</c:forEach>
 <div class="cartWrapper">
 <ol>
 <li class="cartItem">
@@ -36,7 +43,7 @@
 
 <label>전체가격</label><br/>
 <input type="checkbox"/>전체선택
-<input type="button" value="삭제"/><br/>
+<input type="button" value="삭제" onclick="removeCart();"/><br/>
 <input type="button" value="주문하기" onclick="goOrder();"/>	
 </div>
 

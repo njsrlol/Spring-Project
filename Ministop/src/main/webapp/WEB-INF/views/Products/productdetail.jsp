@@ -8,9 +8,18 @@
 <head>
 <meta charset="UTF-8">
 <title>productdetail</title>
+
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Products/css/detailstyle.css">
+<script>
+	function addCart(){
+		let productNum = document.getElementById("productNum").value; 
+		alert(productNum);
+		document.location.href="/main/mypage/addtocart/"+productNum;
+	}
+</script>
 </head>
 <body>
+
 <div class="card">
   <nav>
     <svg class="arrow" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"
@@ -27,11 +36,13 @@
     <img src="">
   </div>
   <div class="description">
+    <input type="hidden" id="productNum" value="pd100001"/>
     <h2>제품분류</h2>
     <h4>제품명</h4>
     <h1>가격</h1>
     <p>제품설명입니다.</p>
-    <button>장바구니</button>
+    
+    <button onclick="addCart()">장바구니</button>
     <button>구매하기</button>
     <button>선물하기</button>
   </div>
