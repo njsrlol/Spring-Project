@@ -50,7 +50,7 @@ public class MyPageController {
 			@PathVariable String productNum) {
 		HttpSession session = request.getSession();
 		ArrayList<String> cartlist = (ArrayList<String>)session.getAttribute("cartLst");
-		
+
 		if(cartlist==null) {
 			cartlist = new ArrayList<String>();
 			session.setAttribute("cartLst", cartlist);			
@@ -71,10 +71,15 @@ public class MyPageController {
 	public String tocart(HttpServletRequest request,Model model) {
 		HttpSession session = request.getSession();
 		ArrayList<String> cartlist = (ArrayList<String>)session.getAttribute("cartLst");
-		
-		if(cartlist==null) {
+
+		if(cartlist==null) 
 			model.addAttribute("emptyInfo", "장바구니가 비어있습니다.");
+		
+		if(cartlist!=null) {
+			List<Products> productLst = mypageServ.getCart(cartlist);
+			model.addAttribute("productLst", productLst);
 		}
+		
 		
 		return "forward:/cart";
 	}

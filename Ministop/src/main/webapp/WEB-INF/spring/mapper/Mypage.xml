@@ -13,5 +13,12 @@
 	</foreach>
 	</select>
 	
+	<select id="getCart" parameterType="java.util.List" resultType="com.ministop.products.Products">
+	SELECT * FROM PRODUCTS WHERE productNum IN
+	<foreach item="productNum" collection="list" open="(" separator="," close=")">
+	#{productNum}
+	</foreach>
+	</select>
+	
 </mapper>
 

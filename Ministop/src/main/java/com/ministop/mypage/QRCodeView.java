@@ -16,8 +16,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
  
 public class QRCodeView extends AbstractView{
         public QRCodeView() {
-               //뷰의 컨텐츠 타입 설정
-               //이미지로 뿌려야 함.
+              
                setContentType("image/png; charset=UTF-8");
         }
  
@@ -48,7 +47,7 @@ public class QRCodeView extends AbstractView{
                text = new String(text.getBytes("UTF-8"), "ISO-8859-1");
                BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, 100, 100);
               
-               //zxing에서 스트림에 파일을 뿌릴수있도록 메소드를 지원함.
+           
                MatrixToImageWriter.writeToStream(bitMatrix, "png", out);
  
               

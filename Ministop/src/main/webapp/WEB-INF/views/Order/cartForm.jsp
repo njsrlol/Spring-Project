@@ -27,24 +27,26 @@ ${emptyInfo }
 <c:forEach var="cartLst" items="${cartLst }" varStatus="loop">
 ${cartLst }
 </c:forEach>
+<br/>
 <div class="cartWrapper">
+<c:if test="${cartLst != null}">
+<c:forEach var="productLst" items="${productLst }" varStatus="loop">
 <ol>
 <li class="cartItem">
 <input type="checkbox"/>
 <img src="${root }images/mslogo.png" height="100px"/>
-0,000	|	옵션	|	설명	
-</li>
-<li>
-<input type="checkbox"/>
-<img src="${root }images/mslogo.png" height="100px"/>
-0,000	|	옵션	|	설명	
+${productLst.productname }	 | ${productLst.productprice }
 </li>
 </ol>
-
+</c:forEach>
+</c:if>
 <label>전체가격</label><br/>
 <input type="checkbox"/>전체선택
 <input type="button" value="삭제" onclick="removeCart();"/><br/>
 <input type="button" value="주문하기" onclick="goOrder();"/>	
 </div>
+<br/>
+<hr/>	
+<a href="${root }mypage">돌아가기</a>
 
 </body>

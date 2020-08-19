@@ -2,6 +2,7 @@ package com.ministop.mypage;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -27,6 +28,13 @@ public List<Products> getRefri(String id) {
 	logger.warn(productNum[i].toString());
 	
 	List<Products> products = mypageDAO.getProdinRefri(productNum);
+	
+	return products;
+}
+
+@Override
+public List<Products> getCart(ArrayList<String> cartlist) {
+	List<Products> products = mypageDAO.getCart(cartlist);
 	
 	return products;
 }

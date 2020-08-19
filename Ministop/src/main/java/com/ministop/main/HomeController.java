@@ -91,7 +91,8 @@ public class HomeController {
 	@RequestMapping("/logout")
 	public String logout(HttpServletRequest request) {
 			HttpSession session = request.getSession();
-			session.removeAttribute("loginId");
+			session.invalidate();
+
 		return "redirect:/mainpage";
 	}
 }
