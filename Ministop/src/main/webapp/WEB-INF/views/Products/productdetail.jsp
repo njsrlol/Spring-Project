@@ -14,7 +14,7 @@
 	function addCart(){
 		let productNum = document.getElementById("productNum").value; 
 		alert(productNum);
-		document.location.href="/main/mypage/addtocart/"+productNum;
+		document.location.href="/main/order/addtocart/"+productNum;
 	}
 </script>
 </head>

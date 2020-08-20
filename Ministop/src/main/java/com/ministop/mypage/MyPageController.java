@@ -60,26 +60,6 @@ public class MyPageController {
 		return "forward:/minirefri";
 	}
 	
-	@RequestMapping("addtocart/{productNum}")
-	public String addtocart(HttpServletRequest request,
-			@PathVariable String productNum) {
-		HttpSession session = request.getSession();
-		ArrayList<String> cartlist = (ArrayList<String>)session.getAttribute("cartLst");
 
-		if(cartlist==null) {
-			cartlist = new ArrayList<String>();
-			session.setAttribute("cartLst", cartlist);			
-		}
-		int stored = 0;
-		for(int i=0; i<cartlist.size(); i++) {
-			logger.warn(cartlist.get(i));
-			if(productNum.contentEquals(cartlist.get(i)))
-				stored++;
-		}
-		if(stored==0)
-		cartlist.add(productNum);
-		
-		return "redirect:/productdetail";
-	}
 
 }
