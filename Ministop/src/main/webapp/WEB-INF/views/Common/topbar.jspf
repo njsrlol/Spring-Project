@@ -21,7 +21,9 @@
 	<%}else{ %>
 	<label class="tmtxt"><a href="${root }logout">로그아웃</a></label>
 	<%} %>
+	<c:if test="${loginId == null }">
 	<label class="tmtxt"><a href="${root }membership">회원가입</a></label> 
+	</c:if>
 	<label	class="tmtxt"><a href="${root }recommend">추천편의점지도</a></label> 
 	<label	class="tmtxt"><a href="${root }customerCenter">고객센터</a></label>
 </div>

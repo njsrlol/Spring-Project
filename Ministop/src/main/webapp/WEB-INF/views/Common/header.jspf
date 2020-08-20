@@ -51,6 +51,7 @@
 <a href="${root }mainpage"><img id="headLogo" src="${root }images/mslogo.png"/></a>
 <span class="headtxt">
 <a href="${mypageURL }">마이페이지</a>
+
 <a href="${cartURL }">장바구니</a>
 </span>
 
