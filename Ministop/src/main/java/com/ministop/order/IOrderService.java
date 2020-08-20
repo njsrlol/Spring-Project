@@ -7,4 +7,5 @@ import com.ministop.products.Products;
 
 public interface IOrderService {
 	public List<Products> getCart(ArrayList<String> cartlist);
+	public void makeOrder(OrderTable order);
 }

@@ -19,4 +19,10 @@ public List<Products> getCart(ArrayList<String> cartlist) {
 	
 	return products;
 }
+
+@Override
+public void makeOrder(OrderTable order) {
+	// TODO Auto-generated method stub
+	
+}
 }

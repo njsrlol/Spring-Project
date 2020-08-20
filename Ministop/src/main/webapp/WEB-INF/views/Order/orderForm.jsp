@@ -1,29 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="home" value="/" />
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:url var="home" value="/"/>
+<c:set var="oTprice" value="0"/>
 <head>
 <style>
-
 </style>
-
 </head>
 <body>
-
+<form id="orderFrm" action="${home}order/makeorder" method="post">
 <div class="order oWarrper">
-
 <div class="order orderDetail">
 <label>날짜 선택</label><br/>
-<input type="date"/><br/>
 
-<label>시간 선택</label>
-<div class="timeRadio">
-  <input type="radio" name="pickupTime" id="pickupTime_Option1" value="Option1">
-  <label for="pickupTime_Option1">시간 1</label>
- <input type="radio" name="pickupTime" id="pickupTime_Option2" value="Option2">
-  <label for="pickupTime_Option2">시간 2</label>
-</div>
+<input type="date" name="receivedate"/><br/>
+
+<label>시간 입력</label>
+
+<input type="text" name="receivetime" placeholder="00:00"/>
 
 <label>할인옵션 선택</label><br/>
 <label>포인트</label><br/>
@@ -35,22 +30,43 @@
 <select></select><br/>
 
 <label>결제수단</label><br/>
+
 <div class="paymentRadio">
-  <input type="radio" name="paymentType" id="paymentType_Card" value="Card">
-  <label for="paymentType_Card">카드</label>
- <input type="radio" name="paymentType" id="paymentType_Transfer" value="Transfer">
-  <label for="paymentType_Transfer">실시간 계좌이체</label>
-   <input type="radio" name="paymentType" id="paymentType_Phone" value="Phone">
-  <label for="paymentType_Phone">휴대폰 결제</label>
+
+       <c:set var="card" value=""/>
+		<c:set var="account" value=""/>
+		<c:set var="phone" value=""/>
+		<c:choose>
+			<c:when test="${order.paymentinfo eq '1' }">
+				<c:set var="card" value="checked"/>
+				<c:set var="account" value=""/>
+				<c:set var="phone" value=""/>
+			</c:when>
+			<c:when test="${order.paymentinfo eq '2' }">
+				<c:set var="card" value=""/>
+				<c:set var="account" value="checked"/>
+				<c:set var="phone" value=""/>
+			</c:when>
+			<c:when test="${order.paymentinfo eq '3' }">
+				<c:set var="card" value=""/>
+				<c:set var="account" value=""/>
+				<c:set var="phone" value="checked"/>
+			</c:when>
+		</c:choose>
+  <input type="radio" name="paymentinfo" value="1" ${card}>카드
+  <input type="radio" name="paymentinfo" value="2" ${account}>실시간 계좌이체
+  <input type="radio" name="paymentinfo" value="3" ${phone}>휴대폰 결제
+ 
 </div>
-
-
-
+<c:forEach var="productLst" items="${productLst }" varStatus="loop">
+<fmt:parseNumber value="${productLst.productprice}" type="number" var="oPprice" />
+<c:set var="oTprice" value="${oTprice + oPprice}"/>
+<input type="text" name="productname" value="${productLst.productname }"/>
+</c:forEach><br/>
+<input type="text" name="ordersales" value="${oTprice}"/>
 </div>
-
 <input type="button" value="취소"/>
-<input type="button" value="결제"/>
-
+<input type="submit" value="결제"/>
 </div>
-
+</form>
 </body>
