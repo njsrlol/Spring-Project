@@ -16,7 +16,7 @@
 </style>
 <script>
 	function goOrder(){
-		document.location.href="order"
+		document.location.href="/main/order/startorder";
 	}
 	
 	function removeCart(){

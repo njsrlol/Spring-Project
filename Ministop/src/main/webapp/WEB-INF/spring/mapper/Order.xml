@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ministop.order.IOrderDAO">
+
+	<select id="getCart" parameterType="java.util.List" resultType="com.ministop.products.Products">
+	SELECT * FROM PRODUCTS WHERE productNum IN
+	<foreach item="productNum" collection="list" open="(" separator="," close=")">
+	#{productNum}
+	</foreach>
+	</select>
+	
+</mapper>
+

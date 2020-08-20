@@ -7,5 +7,5 @@ import com.ministop.products.Products;
 
 public interface IMyPageService {
 	public List<Products> getRefri(String id);
-	public List<Products> getCart(ArrayList<String> cartlist);
+
 }

@@ -1,7 +1,9 @@
 package com.ministop.mypage;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +40,12 @@ public class MyPageController {
 	}
 	
 	@RequestMapping("creatQR")
-	public String creatQR() {
+	public String creatQR(Model model) {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+		String datestr = sdf.format(cal.getTime());
+		model.addAttribute("qrInfo", "TESTQRINFO"+"?date="+datestr);
+		model.addAttribute("orderInfo", "ORDERINFO");
 		
 		return "MyPage/ministopQRForm";
 	}
@@ -74,28 +81,5 @@ public class MyPageController {
 		
 		return "redirect:/productdetail";
 	}
-	
-	@RequestMapping("tocart")
-	public String tocart(HttpServletRequest request,Model model) {
-		HttpSession session = request.getSession();
-		ArrayList<String> cartlist = (ArrayList<String>)session.getAttribute("cartLst");
 
-		if(cartlist==null) 
-			model.addAttribute("emptyInfo", "장바구니가 비어있습니다.");
-		
-		if(cartlist!=null) {
-			List<Products> productLst = mypageServ.getCart(cartlist);
-			model.addAttribute("productLst", productLst);
-		}
-
-		return "forward:/cart";
-	}
-	
-	@RequestMapping("removecart")
-	public String removecart(HttpServletRequest request) {
-		HttpSession session = request.getSession();
-		session.removeAttribute("cartLst");
-		
-		return "redirect:/mypage/tocart";
-	}
 }

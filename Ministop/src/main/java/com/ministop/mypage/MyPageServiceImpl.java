@@ -32,11 +32,6 @@ public List<Products> getRefri(String id) {
 	return products;
 }
 
-@Override
-public List<Products> getCart(ArrayList<String> cartlist) {
-	List<Products> products = mypageDAO.getCart(cartlist);
-	
-	return products;
-}
+
 
 }
