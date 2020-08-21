@@ -60,6 +60,7 @@ public class HomeController {
 		pageMap.put("minirefri", "MyPage/miniRefri");
 		pageMap.put("order", "Order/orderForm");
 		pageMap.put("cart", "Order/cartForm");
+		pageMap.put("three", "MyPage/three");
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
