@@ -6,6 +6,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,7 @@ import com.ministop.products.Products;
 public class OrderController {
 @Autowired
 private IOrderService orderServ;
-
+private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 @RequestMapping("startorder")
 public String startorder(OrderTable order, Model model) {
 	model.addAttribute("order", order);
@@ -86,8 +88,8 @@ public String carttoback(HttpServletRequest request) {
 
 //이제 값 받아서 service 로 넘기기
 @RequestMapping("makeorder")
-public String makeorder(Products product) {
-	
+public String makeorder(OrderTable order) {
+	orderServ.makeOrder(order);
 	
 	return "redirect:/mypage";
 }

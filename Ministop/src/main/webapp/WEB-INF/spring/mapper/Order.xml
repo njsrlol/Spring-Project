@@ -17,9 +17,8 @@
 		receiveCheck,	receiveDate, receiveTime, paymentInfo, orderCheck,id)
 		VALUES
 		((SELECT NVL(MAX(orderNum), 0 )+1 FROM OrderTable),
-		to_char(sysdate,'yyyymmddhh24mi'),	#{orderproducts},
+		(SELECT TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS') SYS_DATE24 FROM DUAL),	#{orderproducts},
 		#{ordersales}, 0, #{receivedate}, #{receivetime}, #{paymentinfo}, 0, #{id})
 	</insert>
 
 </mapper>
-

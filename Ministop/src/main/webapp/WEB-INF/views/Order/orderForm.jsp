@@ -7,9 +7,17 @@
 <head>
 <style>
 </style>
+<script>
+function backtocart(){
+	document.location.href="/main/order/tocart";
+	
+
+}
+</script>
 </head>
 <body>
 <form id="orderFrm" action="${home}order/makeorder" method="post">
+<input type="hidden" name="id" value="${loginId}"/>
 <div class="order oWarrper">
 <div class="order orderDetail">
 <label>날짜 선택</label><br/>
@@ -61,11 +69,11 @@
 <c:forEach var="productLst" items="${productLst }" varStatus="loop">
 <fmt:parseNumber value="${productLst.productprice}" type="number" var="oPprice" />
 <c:set var="oTprice" value="${oTprice + oPprice}"/>
-<input type="text" name="productname" value="${productLst.productname }"/>
+<input type="text" name="orderproducts" value="${productLst.productname }"/>
 </c:forEach><br/>
 <input type="text" name="ordersales" value="${oTprice}"/>
 </div>
-<input type="button" value="취소"/>
+<input type="button" value="취소" onclick="backtocart();"/>
 <input type="submit" value="결제"/>
 </div>
 </form>

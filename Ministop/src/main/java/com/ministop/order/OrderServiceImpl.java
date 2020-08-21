@@ -22,7 +22,7 @@ public List<Products> getCart(ArrayList<String> cartlist) {
 
 @Override
 public void makeOrder(OrderTable order) {
-	// TODO Auto-generated method stub
-	
+	orderDAO.makeOrder(order);	
 }
+
 }
