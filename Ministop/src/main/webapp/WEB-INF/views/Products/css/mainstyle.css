@@ -57,7 +57,6 @@ input[type=text] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(216, 216, 216, 0.5);
   border-radius: 10px;
 }
 

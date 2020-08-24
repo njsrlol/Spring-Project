@@ -18,12 +18,11 @@
 <br />
 
 <div align="center">
-	<h1>주문확인</h1>
+	<h1>판매 내역</h1>
 	<%
 		for (int i = 0; i < 10; i++) {
 	%>
-	<div id="orderDiv">8월 3일 16:40 주문 접수<button formaction="#">상품보기</button> 
-	<button formaction="#">진열 완료</button><button formaction="#">진열반송</button>
+	<div id="orderDiv">8월 3일 판매내역<button formaction="#">내역보기</button>
 	</div>
 	<br />
 	<%

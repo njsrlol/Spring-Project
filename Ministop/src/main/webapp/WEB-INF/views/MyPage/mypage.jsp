@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="home" value="/" />
+<c:set var="root" value="${pageContext.request.contextPath }/"/>
 <head>
 <style type="text/css">
 .mpWrapper{
@@ -15,6 +15,13 @@
 	grid-template-columns : 1fr;	
 }
 </style>
+<script>
+	function makeQR(url){
+		window.name = "QRCODE";
+		window.open(url, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+	}
+	
+</script>
 </head>
 <body>
 
@@ -23,9 +30,9 @@
 <div class="mypage mpWrapper">
 
 <div class="mypage memberInfo">
-<div>OOO님 안녕하세요<br/>나의 매장 OO점</div>
+<div>${loginId}님 안녕하세요<br/>나의 매장 OO점</div>
 
-<a href="minirefri">미니냉장고</a>
+<a href="${root }mypage/getminiRefri">미니냉장고</a>
 
 <div>
 포인트 : <input type="text" readonly="readonly"/><br/>
@@ -45,7 +52,7 @@
 	</tr>
 	<tr>
 		<td>123</td>
-		<td><a href="creatQR">345</a></td>
+		<td><input type="button" value="QR" onclick="makeQR('${root}mypage/creatQR');"/></td>
 	</tr>
 </table>
 </div>

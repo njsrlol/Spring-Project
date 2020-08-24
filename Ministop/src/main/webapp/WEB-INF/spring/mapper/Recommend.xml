@@ -5,8 +5,8 @@
 	<select id="radiusSearch" parameterType="Map" resultType="com.ministop.recommend.Store">
 		SELECT STORENUM, BRANCHNAME, SIDONAME, SIGUNGUNAME, PUBLICDONG, NEWADDRESS, LONGITUDE, LATITUDE
 		FROM STORE
-		WHERE LONGITUDE <![CDATA[ >= ]]> #{longitude}-0.05 AND LONGITUDE <![CDATA[ <= ]]> #{longitude}+0.05
-		AND LATITUDE <![CDATA[ >= ]]> #{latitude}-0.05 AND LATITUDE <![CDATA[ <= ]]> #{latitude}+0.05
+		WHERE LONGITUDE <![CDATA[ >= ]]> #{longitude}-0.005 AND LONGITUDE <![CDATA[ <= ]]> #{longitude}+0.005
+		AND LATITUDE <![CDATA[ >= ]]> #{latitude}-0.005 AND LATITUDE <![CDATA[ <= ]]> #{latitude}+0.005
 	</select>
 
 </mapper>

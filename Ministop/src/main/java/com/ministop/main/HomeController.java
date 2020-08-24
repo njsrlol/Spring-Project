@@ -60,6 +60,7 @@ public class HomeController {
 		pageMap.put("minirefri", "MyPage/miniRefri");
 		pageMap.put("order", "Order/orderForm");
 		pageMap.put("cart", "Order/cartForm");
+		pageMap.put("three", "MyPage/three");
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -91,7 +92,8 @@ public class HomeController {
 	@RequestMapping("/logout")
 	public String logout(HttpServletRequest request) {
 			HttpSession session = request.getSession();
-			session.removeAttribute("loginId");
+			session.invalidate();
+
 		return "redirect:/mainpage";
 	}
 }

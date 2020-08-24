@@ -1,20 +1,16 @@
-.wrapper {
-	grid-template-colums : 40px 50px auto 50px 40px;
-	grid-template-rows : 8% 100px auto;
-	
-}
-
 body {
+  background: #F9F8FD;
+  font-family: 'Lexend Exa', sans-serif;
 }
 
 nav {
   position: relative;
-  top: 8px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;
-  border: 1px solid #2375D8;
-  border-radius: 20px;
+  border: 2px solid #EBECF1;
+  border-radius: 30px;
   animation: slide-in 1s ease-out;
 }
 
@@ -23,15 +19,15 @@ ul {
   display: flex;
   flex: 1 1 auto;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 30px;
   list-style-type: none;
 }
 ul li:not(:last-child) {
   margin-right: 40px;
 }
 ul li {
-  border: 1px solid transparent;
-  border-radius: 1px;
+  border: 2px solid transparent;
+  border-radius: 5px;
   padding: 10px;
   transition: background 0.2s;
 }
@@ -46,12 +42,12 @@ ul li ul {
   opacity: 0;
   position: absolute;
   display: block;
-  margin: 10px -10px;
+  margin: 12px -12px;
   padding: 0;
   background: #FFA91B;
-  border: 1px solid #F7C833;
-  border-right: 1px solid #2375D8;
-  border-bottom: 1px solid #2375D8;
+  border: 2px solid #F7C833;
+  border-right: 2px solid #F89329;
+  border-bottom: 2px solid #F89329;
   border-radius: 5px;
   transition: opacity 0.2s, visibility 0.2s;
 }
@@ -64,23 +60,23 @@ ul li ul li a {
   color: #2375D8;
 }
 ul li:hover {
-  background: skyblue;
-  border: 1px solid #F05749;
-  border-right: 1px solid #2375D8;
-  border-top: 1px solid #2375D8;
-  border-left: 1px solid #2375D8;
-  border-bottom: 1px solid #2375D8;
+  background: #EC4138;
+  border: 2px solid #F05749;
+  border-right: 2px solid #E02A21;
+  border-bottom: 2px solid #E02A21;
 }
 ul li:hover a {
+  color: #F9F8FD;
 }
 ul li:hover ul {
   visibility: visible;
   opacity: 1;
+  box-shadow: 0px 3px 5px 2px #EBECF1;
 }
 ul li:hover ul li a {
+  color: #F9F8FD;
 }
 
-/* 
 @keyframes slide-in {
   0% {
     top: -50px;
@@ -94,4 +90,24 @@ ul li:hover ul li a {
   100% {
     top: 15px;
   }
-} */
+}
+
+
+
+#orderDiv{
+	border-radius: 5px;
+	border-style: solid;
+	margin: 0 auto 50px;
+	background-color: #B2CCFF;
+	padding: 25px 0px;
+	margin-top: 0px;
+	font-size: 20px;
+	font-weight: 300;
+	width: 700px;
+	
+}
+
+
+
+
+

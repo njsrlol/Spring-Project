@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ministop.mypage.IMypageDAO">
-	<select id="getMyInfo" parameterType="String" resultType="Map">
-			
-	
+	<select id="getRefri" parameterType="String"  resultType="String">
+		SELECT PRODUCTNUM FROM REFRIGERATOR WHERE ID=#{id}
+		ORDER BY refriDate DESC
 	</select>
-
+	
+	<select id="getProdinRefri" parameterType="String" resultType="com.ministop.products.Products">
+	SELECT * FROM PRODUCTS WHERE productNum IN
+	<foreach item="productNum" collection="array" open="(" separator="," close=")">
+	#{productNum}
+	</foreach>
+	</select>
+	
+	<select id="getCart" parameterType="java.util.List" resultType="com.ministop.products.Products">
+	SELECT * FROM PRODUCTS WHERE productNum IN
+	<foreach item="productNum" collection="list" open="(" separator="," close=")">
+	#{productNum}
+	</foreach>
+	</select>
+	
 </mapper>
 
