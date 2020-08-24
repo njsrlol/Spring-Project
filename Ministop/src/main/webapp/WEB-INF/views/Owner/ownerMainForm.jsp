@@ -1,12 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+	pageEncoding="UTF-8"%>
 
-</body>
-</html>
+
+
+
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/Owner/css/style.css">
+
+
+<nav>
+	<ul>
+		<li><a href="${root }ownerMainForm">주문확인</a></li>
+		<li><a href="${root }ownerHistory">판매내역</a></li>
+	</ul>
+</nav>
+<br />
+<br />
+
+<div align="center">
+	<h1>주문확인</h1>
+	<%
+		for (int i = 0; i < 10; i++) {
+	%>
+	<div id="orderDiv">8월 3일 16:40 주문 접수<button formaction="#">상품보기</button> 
+	<button formaction="#">진열 완료</button><button formaction="#">진열반송</button>
+	</div>
+	<br />
+	<%
+		}
+	%>
+</div>
