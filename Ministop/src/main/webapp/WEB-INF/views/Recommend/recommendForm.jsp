@@ -9,7 +9,7 @@
 <meta charset="utf-8" />
 <title>Kakao 지도 시작하기</title>
 <link rel="stylesheet"
-   href="${pageContext.request.contextPath}/Recommend/css/style.css">
+   href="${pageContext.request.contextPath}/Recommend/css/style.css"/>
 
 </head>
 <body>
