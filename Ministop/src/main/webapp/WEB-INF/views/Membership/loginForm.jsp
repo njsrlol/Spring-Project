@@ -5,7 +5,7 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/Membership/css/style.css">
 
-<h1>id : ${msg }</h1>
+<%-- <h1>id : ${msg }</h1> --%>
 <center>
 <h1>로그인</h1>
 <form action="${home }membership/loginProc" method="post">

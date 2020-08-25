@@ -20,9 +20,9 @@
 <div align="center">
 	<h1>판매 내역</h1>
 	<%
-		for (int i = 0; i < 10; i++) {
+		for (int i = 10; i > 0; i--) {
 	%>
-	<div id="orderDiv">8월 3일 판매내역<button formaction="#">내역보기</button>
+	<div id="orderDiv">8월 <%=i %>일 판매내역<button formaction="#">내역보기</button>
 	</div>
 	<br />
 	<%

@@ -10,8 +10,8 @@
 		<font color="red">${msg }</font>
 	</h3>
 
-	<!-- 인증번호 확인 추후 삭제 -->
-	세션정보 : ${sessionInfo }<br /> 인증번호 : ${sessionInfo.authNum }
+	<%-- <!-- 인증번호 확인 추후 삭제 -->
+	세션정보 : ${sessionInfo }<br /> 인증번호 : ${sessionInfo.authNum } --%>
 	<h1>회원가입</h1>
 	<div id="memberDiv">
 		<form action="${home }membership/memberProc" method="post">

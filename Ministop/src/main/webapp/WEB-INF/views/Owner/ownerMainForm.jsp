@@ -20,9 +20,9 @@
 <div align="center">
 	<h1>주문확인</h1>
 	<%
-		for (int i = 0; i < 10; i++) {
+		for (int i = 10; i > 0; i--) {
 	%>
-	<div id="orderDiv">8월 3일 16:40 주문 접수<button formaction="#">상품보기</button> 
+	<div id="orderDiv">8월 <%=i %>일 주문 접수<button formaction="#">상품보기</button> 
 	<button formaction="#">진열 완료</button><button formaction="#">진열반송</button>
 	</div>
 	<br />
